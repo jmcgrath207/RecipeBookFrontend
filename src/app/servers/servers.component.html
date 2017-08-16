@@ -18,7 +18,11 @@
 
 
 
-<p *ngIf="serverCreated">Sever was created {{ serverName  }}</p>
+<p *ngIf="serverCreated; else noServer">Sever was created {{ serverName  }}</p>
+<ng-template #noServer>
+  <p></p>
+  No server was created!
+</ng-template>
 
 
 <!--<p [innerText]="allowNewServer">-->
