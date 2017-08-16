@@ -3,6 +3,17 @@
         class="btn btn-primary"
         (click)="onCreateServer()" > Add Server </button>
 
+
+
+
+<input type="text"
+        class="form-control"
+        (input)="onUpdateServerName($event)">
+
+
+<p> {{ serverName  }}</p>
+
+
 <p [innerText]="allowNewServer">
 
 <p>{{ serverCreationStatus }}</p>
