@@ -18,14 +18,14 @@
 
 
 
-<p> {{ serverName  }}</p>
+<p *ngIf="serverCreated">Sever was created {{ serverName  }}</p>
 
 
-<p [innerText]="allowNewServer">
+<!--<p [innerText]="allowNewServer">-->
 
-<p>{{ serverCreationStatus }}</p>
+<!--<p>{{ serverCreationStatus }}</p>-->
 
-  <p>{{ allowNewServer }}</p>
+  <!--<p>{{ allowNewServer }}</p>-->
 
 <app-server></app-server>
 <app-server></app-server>
