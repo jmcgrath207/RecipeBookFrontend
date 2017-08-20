@@ -11,6 +11,8 @@ export class RecipesListComponent implements OnInit {
 
   recipes: RecipeModel[] = [
     new RecipeModel('A Test Recipe', 'THis is simply a test',
+      'https://farm9.staticflickr.com/8575/15775087589_a725c0b077_z.jpg'),
+    new RecipeModel('A Test Recipe', 'THis is simply a test',
       'https://farm9.staticflickr.com/8575/15775087589_a725c0b077_z.jpg')
   ];
 
