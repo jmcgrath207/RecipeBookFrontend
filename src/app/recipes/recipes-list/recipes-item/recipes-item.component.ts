@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {RecipeModel} from '../../recipe.model';
 
 @Component({
   selector: 'app-recipes-item',
@@ -12,4 +13,10 @@ export class RecipesItemComponent implements OnInit {
   ngOnInit() {
   }
 
+  /* Data is received from the recipe-list.html databind */
+  @Input() recipe: RecipeModel;
+
 }
+
+
+
