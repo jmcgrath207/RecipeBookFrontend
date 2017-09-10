@@ -12,6 +12,7 @@ import { RecipesItemComponent } from './recipes/recipes-list/recipes-item/recipe
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { DropdownDirective } from './directives/dropdown.directive';
+import {ShoppingListService} from './services/shoppingList.service';
 
 
 
@@ -35,7 +36,7 @@ import { DropdownDirective } from './directives/dropdown.directive';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
