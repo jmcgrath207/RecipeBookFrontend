@@ -8,6 +8,7 @@ export class ShoppingListService {
   constructor() { }
 
   ingredientsChanged = new Subject<IngredientModel[]>();
+  startedEditing = new Subject<number>();
   private _ingredients: IngredientModel[] = [
     new IngredientModel('Apples', 5),
     new IngredientModel('Pinapple', 3),
