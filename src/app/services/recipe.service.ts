@@ -11,14 +11,14 @@ export class RecipeService {
 
 
   private _recipes: RecipeModel[] = [
-    new RecipeModel('A Test Recipe', 'THis is simply a test',
+    new RecipeModel('A Test Recipe', 'This is simply a test',
       'https://farm9.staticflickr.com/8575/15775087589_a725c0b077_z.jpg',
       [
         new IngredientModel('meat', 1),
         new IngredientModel('french fries', 20)
 
       ]),
-    new RecipeModel('A Test Recipe', 'THis is simply a test 2',
+    new RecipeModel('A Test Recipe', 'This is simply a test 2',
       'https://static.pexels.com/photos/20787/pexels-photo.jpg',
       [
         new IngredientModel('Buns', 2),
