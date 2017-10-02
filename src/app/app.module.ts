@@ -7,16 +7,17 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
-import { DropdownDirective } from './directives/dropdown.directive';
+import { DropdownDirective } from './Shared/dropdown.directive';
 import {ShoppingListService} from './services/shoppingList.service';
 import {AppRoutingModule} from './app-routing.module';
 import {RecipeService} from './services/recipe.service';
-import {DataStorageService} from './SharedModel/data-storage.service';
+import {DataStorageService} from './Shared/data-storage.service';
 import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import {AuthService} from './auth/auth.service';
 import {AuthGuardService} from './auth/auth-guard.service';
 import {RecipeModule} from './recipes/recipe.module';
+import {SharedModule} from './Shared/shared.module';
 
 
 
@@ -31,7 +32,6 @@ import {RecipeModule} from './recipes/recipe.module';
     HeaderComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    DropdownDirective,
     SignupComponent,
     SigninComponent
   ],
@@ -40,7 +40,8 @@ import {RecipeModule} from './recipes/recipe.module';
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    RecipeModule
+    RecipeModule,
+    SharedModule
   ],
   providers: [ShoppingListService, RecipeService, DataStorageService, AuthService, AuthGuardService],
   bootstrap: [AppComponent]

@@ -2,7 +2,7 @@
 
 
 
-import {IngredientModel} from '../SharedModel/Ingredient.model';
+import {IngredientModel} from '../Shared/Ingredient.model';
 
 export class RecipeModel {
   public name: string;

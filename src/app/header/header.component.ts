@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Output} from '@angular/core';
-import {DataStorageService} from '../SharedModel/data-storage.service';
+import {DataStorageService} from '../Shared/data-storage.service';
 import { Response } from '@angular/http';
 import {AuthService} from '../auth/auth.service';
 
