@@ -5,9 +5,6 @@ import {HttpModule} from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { ShoppingListComponent } from './shopping-list/shopping-list.component';
-import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
-import { DropdownDirective } from './Shared/dropdown.directive';
 import {ShoppingListService} from './services/shoppingList.service';
 import {AppRoutingModule} from './app-routing.module';
 import {RecipeService} from './services/recipe.service';
@@ -18,6 +15,7 @@ import {AuthService} from './auth/auth.service';
 import {AuthGuardService} from './auth/auth-guard.service';
 import {RecipeModule} from './recipes/recipe.module';
 import {SharedModule} from './Shared/shared.module';
+import {ShoppingListModule} from './shopping-list/shopping-list.module';
 
 
 
@@ -30,18 +28,16 @@ import {SharedModule} from './Shared/shared.module';
   declarations: [
     AppComponent,
     HeaderComponent,
-    ShoppingListComponent,
-    ShoppingEditComponent,
     SignupComponent,
     SigninComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
     HttpModule,
     AppRoutingModule,
     RecipeModule,
-    SharedModule
+    SharedModule,
+    ShoppingListModule
   ],
   providers: [ShoppingListService, RecipeService, DataStorageService, AuthService, AuthGuardService],
   bootstrap: [AppComponent]
