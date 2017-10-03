@@ -10,10 +10,10 @@ import {RecipeService} from './services/recipe.service';
 import {DataStorageService} from './Shared/data-storage.service';
 import {AuthService} from './auth/auth.service';
 import {AuthGuardService} from './auth/auth-guard.service';
-import {RecipeModule} from './recipes/recipe.module';
 import {SharedModule} from './Shared/shared.module';
 import {ShoppingListModule} from './shopping-list/shopping-list.module';
 import {AuthModule} from './auth/auth.module';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -26,12 +26,12 @@ import {AuthModule} from './auth/auth.module';
   declarations: [
     AppComponent,
     HeaderComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     HttpModule,
     AppRoutingModule,
-    RecipeModule,
     SharedModule,
     ShoppingListModule,
     AuthModule
