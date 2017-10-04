@@ -4,7 +4,7 @@ import {RecipeService} from '../services/recipe.service';
 import {RecipeModel} from '../recipes/recipe.model';
 import 'rxjs';
 import {AuthService} from '../auth/auth.service';
-import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
+import {HttpClient, HttpHeaders, HttpParams, HttpRequest} from '@angular/common/http';
 
 @Injectable()
 export class DataStorageService {
@@ -15,13 +15,18 @@ export class DataStorageService {
 
     storeRecipes() {
       const token = this.authService.getToken();
- /*     const headers = new HttpHeaders().set('Authorization', "asdfasdfasdf").append("asdfsa","asdfsafd");*/
+/* /!*     const headers = new HttpHeaders().set('Authorization', "asdfasdfasdf").append("asdfsa","asdfsafd");*!/
       return this.httpClient.put('https://angular4recipe.firebaseio.com/recipes.json',
         this.recipeService.recipes, {
         observe: 'body',
           params: new HttpParams().set('auth', token)
-/*          headers: headers*/
-        });
+/!*          headers: headers*!/
+        });*/
+
+      // return type for upload or download status to be tracked in webapp
+      const req = new HttpRequest( 'PUT', 'https://angular4recipe.firebaseio.com/recipes.json',
+        this.recipeService.recipes, {reportProgress: true, params: new HttpParams().set('auth', token)});
+      return this.httpClient.request(req);
     }
 
     getRecipes() {
