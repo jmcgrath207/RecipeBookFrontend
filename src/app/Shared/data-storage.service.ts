@@ -1,6 +1,5 @@
 
 import {Injectable} from '@angular/core';
-import { Response} from '@angular/http';
 import {RecipeService} from '../services/recipe.service';
 import {RecipeModel} from '../recipes/recipe.model';
 import 'rxjs';
@@ -23,9 +22,14 @@ export class DataStorageService {
     getRecipes() {
     const token = this.authService.getToken();
 
-      this.httpClient.get<RecipeModel[]>('https://angular4recipe.firebaseio.com/recipes.json?auth=' + token)
+      this.httpClient.get<RecipeModel[]>('https://angular4recipe.firebaseio.com/recipes.json?auth=' + token,
+        {
+        observe: 'body',
+        responseType: 'json'
+      })
         .map(
           (recipes) => {
+            console.log(recipes);
             for ( let i = 0; i < recipes.length; i++) {
               if (!recipes[i]['ingredients']) {
                 console.log(recipes[i]);
