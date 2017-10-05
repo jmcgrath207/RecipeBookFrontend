@@ -24,8 +24,10 @@ export class DataStorageService {
         });*/
 
       // return type for upload or download status to be tracked in webapp
+/*      const req = new HttpRequest( 'PUT', 'https://angular4recipe.firebaseio.com/recipes.json',
+        this.recipeService.recipes, {reportProgress: true, params: new HttpParams().set('auth', token)});*/
       const req = new HttpRequest( 'PUT', 'https://angular4recipe.firebaseio.com/recipes.json',
-        this.recipeService.recipes, {reportProgress: true, params: new HttpParams().set('auth', token)});
+        this.recipeService.recipes, {reportProgress: true});
       return this.httpClient.request(req);
     }
 
