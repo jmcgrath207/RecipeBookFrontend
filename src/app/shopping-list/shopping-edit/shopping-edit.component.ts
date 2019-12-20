@@ -2,7 +2,7 @@ import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {IngredientModel} from '../../Shared/Ingredient.model';
 import {ShoppingListService} from '../../services/shoppingList.service';
 import {NgForm} from '@angular/forms';
-import {Subscription} from 'rxjs/Subscription';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-shopping-edit',
