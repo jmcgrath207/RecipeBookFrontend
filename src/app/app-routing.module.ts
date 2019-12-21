@@ -9,7 +9,7 @@ const appRoutes: Routes = [
 
 /*  {path: '', redirectTo: '/recipes', pathMatch: 'full'},*/
   {path: '', component: HomeComponent},
-  {path: 'recipes', loadChildren: './recipes/recipe.module#RecipeModule'}, // lazy loading
+  {path: 'recipes', loadChildren: () => import('./recipes/recipe.module').then(m => m.RecipeModule)}, // lazy loading
   {path: 'shopping-list', component: ShoppingListComponent},
 
 ];
