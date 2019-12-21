@@ -5,6 +5,7 @@ import {RecipeModel} from '../recipes/recipe.model';
 import 'rxjs';
 import {AuthService} from '../auth/auth.service';
 import {HttpClient, HttpHeaders, HttpParams, HttpRequest} from '@angular/common/http';
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class DataStorageService {
